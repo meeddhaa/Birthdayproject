@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <audio id="birthdayMusic" src="assets/music.mp3" loop></audio>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>This is to remind you that "YOU'RE OLD!!"</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!-- Top banner GIF -->
+<div class="top-banner">
+  <img src="assets/banner.gif" alt="Birthday Banner">
+</div>
+ 
+  <audio id="birthdayMusic" src="assets/music.mp3" autoplay loop></audio>
+
+  <div class="container">
+    <h1 class="title">🎉 Happy Birthday Duti 🎂</h1>
+    <h2 class="subtitle">Here’s to a year of clever moves and quiet victories. Celebrate like a true Slytherin!!!!!</h2>
+    <img src="assets/balloon.gif" alt="Balloons flying">
+    <button id="nextBtn"> You need to blow the Candle</button>
+  </div>
+
+  <script>
+    document.getElementById("nextBtn").addEventListener("click", function() {
+      window.location.href = "candle.html";
+    });
+    
+</script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+

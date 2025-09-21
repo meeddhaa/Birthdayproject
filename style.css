@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #83069c, hwb(289 2% 55%));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;          /* relative positioning inside the page */
+  background: rgb(166, 70, 201);           /* card background */
+  padding: 2rem 3rem;
+  border-radius: 20px;         /* rounded corners */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* shadow for floating effect */
+  text-align: center;
+  max-width: 800px;            /* optional width */
+  margin: 50px auto;           /* center horizontally and space from top */
+  z-index: 10;                 /* above background decorations */
+}
+@keyframes floatContainer {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.container {
+  animation: floatContainer 3s ease-in-out infinite;
+}
+.container {
+  background: rgba(164, 98, 194, 0.95); /* semi-transparent */
+}
+
+
+
+h1 {
+  color: #ddb8e1;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 250px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #ff4081;
+  border: none;
+  color: white;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #2256c8;
+}
+/* Balloons in corners */
+.top-left, .top-right {
+  position: fixed;
+  top: 10px;
+  width: 100px; /* adjust size */
+  height: auto;
+  z-index: 1000; /* make sure it's on top */
+}
+
+.top-left {
+  left: 10px;
+}
+
+.top-right {
+  right: 10px;
+}
+
+/* Banner across top */
+.banner {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff4081;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 999; /* above everything */
+  animation: bounce 2s infinite; /* optional animation */
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.top-left img, .top-right img {
+  animation: float 3s ease-in-out infinite;
+}
+/* Top banner GIF */
+.top-banner {
+  position: fixed;
+  top: -20px; /* push banner 20px higher */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 400px; /* adjust size as needed */
+}
+
+
+.top-banner img {
+  width: 400px;          /* adjust size as needed */
+  max-width: 90vw;       /* responsive */
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .top-banner img {
+    width: 250px;
+  }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <audio id="birthdayMusic" src="assets/music.mp3" loop></audio>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cake Time!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+       <!-- Top banner GIF -->
+<div class="top-banner">
+  <img src="assets/banner.gif" alt="Birthday Banner">
+</div>
+  <audio id="birthdayMusic" src="assets/music.mp3" autoplay loop></audio>
+
+  <div class="container">
+    <h1>🎂 Aije tor Cake!</h1>
+    <img src="assets/cake.gif" alt="Birthday Cake">
+    <button id="nextBtn">Now last but not least, Gift</button>
+  </div>
+
+  <script>
+    document.getElementById("nextBtn").addEventListener("click", function() {
+      window.location.href = "gift.html";
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
